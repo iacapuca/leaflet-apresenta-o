@@ -1,0 +1,176 @@
+<!DOCTYPE html><html><head><title>Big</title><meta charset='utf-8'><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href='big.css' rel='stylesheet' type='text/css' />
+<style>
+  .google {
+    background-image: url(./images/google.png);
+    background-repeat: no-repeat;
+  }
+  .javascript {
+    background-image: url(./images/javascript.png);
+    background-repeat: no-repeat;
+    background-position: center 25px;
+    background-color: #fff;
+  }
+  .zero {
+    background-image: url(./images/zero.png);
+    background-repeat: no-repeat;
+    background-position: center 25px;
+
+  }
+  .four {
+    background-image: url(./images/tilegrid.png);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+  }
+  .map {
+    background-image: url(./images/map.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .html1 {
+    background-image: url(./images/html1.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center 40px;
+  }
+  .map2 {
+    background-image: url(./images/map2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .html2 {
+    background-image: url(./images/html2.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center 40px;
+  }
+  .leaflet-api {
+    background-image: url(./images/leafletapi.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center 25px;
+  }
+  .map3 {
+    background-image: url(./images/map3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .html3 {
+    background-image: url(./images/html3.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center 40px;
+  }
+  .map4 {
+    background-image: url(./images/map4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .html4 {
+    background-image: url(./images/html4.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center 40px;
+  }
+  .tile-loading {
+    background-image: url(./images/tiles-loading.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .slippy-map {
+    background-image: url(./images/slippy-map.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .html {
+    background-image: url(./images/html.png);
+    background-repeat: no-repeat;
+    background-position: center 25px;
+    background-color: #fff;
+  }
+</style>
+<script src='big.js'></script>
+</head><body>
+
+<div>Fazendo seu primeiro mapa com <strong>Leaflet</strong>!</div>
+<div>Vá até <a href="xyz">xyz</a> para acompanhar a apresentação.</div>
+<div><em>Oi!</em>Eu sou o Pedro, eu moro em <strong>Recife</strong>. Sou graduando em <em>Engenharia Eletrônica</em>.E faço parte da <a href=http://maptime.io>AMECiclo</a>.</div>
+<div>Vamos falar sobre<strong>web maps</strong>!</div>
+<div>O que é um <em>web map</em>?</div>
+<div><strong>Primeiro:</strong> Um web map é um <em>mapa</em> que reside na <em>web</em>.</div>
+<div><strong>(Duh.)</strong></div>
+<div><em>Como</em> colocamos mapas na web?</div>
+<div data-bodyclass="html">HTML!</div>
+<div><strong>HTML</strong> é uma <em>linguagem</em> de marcação para a web.</div>
+<div>Quando<strong>pensamos em</strong> web maps, nos pensamos em <em>interatividade</em>. Pensamos em...</div>
+<div data-bodyclass="google">Google Maps!</div>
+<div><strong>Acertei</strong>?</div>
+<div>Nos queremos <strong>interatividade</strong>. Nos queremos que as pessoas <em>interajam</em> com nossos web maps.</div>
+<div><em>Como</em> nos fazemos <strong>interatividade</strong> na web?</div>
+<div data-bodyclass="javascript">JavaScript!</div>
+<div>Mas <strong>vamos dar um passo para trás</strong> e conversar <em>sobre como web maps funcionam</em>.</div>
+<div>Parte dos slides dessa apresentação vieram da excelente apresentação <a href="http://maptime.github.io/anatomy-of-a-web-map">Anatomy of a Web Map</a> feita por <a href="http://twitter.com/mappingmashups">Alan McConchie</a> e <a href="http://twitter.com/bethschechter">Beth Schechter</a>.</div>
+<div>Vamos falar sobre <em>tiles</em>!</div>
+<div><strong>Raster tiles</strong>, dessa vez. <em>Vector tiles</em> talvez em outra oportunidade.</div>
+<div>"... web maps são feitos de varias imagens quadradas chamadas de <em>tiles</em>."</div>
+<div>"Cada tile costuma ter <strong>256x256 pixels</strong> e são posicionados <em>lado a lado</em> a fim de criar a ilusão de uma <strong>imagem muito grande sem emendas</strong>."</div>
+<div data-bodyclass="tile-loading">Esses pequenos tiles carregam <em>bem mais rapido</em> que um grande mapa.</div>
+<div data-bodyclass="slippy-map">Esse tipo de mapa costuma ser chamado de <strong>slippy map</strong>.</div>
+<div>Cada <em>nivel de zoom</em> possui o seu proprio conjunto de <strong>tiles</strong>.</div>
+<div><em>O nivel 0:</em> <strong>1</strong> tile para o mundo inteiro.</div>
+<div data-bodyclass="zero"></div>
+<div>Para cada <em>nivel adicional</em>, o número de tiles cresce <strong>exponencialmente.</strong></div>
+<div><em>Nivel 1:</em> <strong>4</strong> tiles para o mundo inteiro.</div>
+<div data-bodyclass="four"></div>
+<div><em>Nivel 2:</em> <strong>16</strong> tiles para o mundo inteiro.</div>
+<div>... <strong>acho que vocês pegaram a ideia.</strong></div>
+<div>Os tiles só renderizam <em>quando você está olhando para eles</em>, nesse momento eles formam mapas... <strong>bem rapido!</strong>.</div>
+<div>Como você percebeu, tiles são apenas <em>imagens estaticas na internet</em>.</div>
+<div><em>Massa.</em> Mas o que isso te a ver com <a href="http://leafletjs.com">Leaflet</a>?</div>
+<div>Esses tiles precisam ganhar <strong>vida de alguma forma</strong> numa página da web. Eles precisam saber <em>quando</em> carregar e como <strong>reagir</strong> quando você clicar ou arrastar.</div>
+<div>Leaflet é uma <strong>biblioteca de JavaScript</strong> que nos permite fazer isso.</div>
+<div>Incluir <strong>bibliotecas</strong> no nosso codigo é como <em>copiar e colar</em> parte do codigo de outra pessoas no nosso.</div>
+<div>Você tem <strong>acesso</strong> a tudo na biblioteca. No nosso caso é um <em>cojunto de ferramentas</em> para fazer web maps e dar a eles <strong>funcionalidade.</strong></div>
+<div data-bodyclass="leaflet-api"></div>
+<div>(You can read more about <em>Leaflet</em> at <a href="http://leafletjs.com">leafletjs.com</a>.)</div>
+<div>The <strong>first awesome thing</strong> we can do with Leaflet is make ourselves a <em>map container</em>.</div>
+<div data-bodyclass="map"><pre><span>var map = L.map('leaflet-map');</span></pre></div>
+<div>The <pre><span>'leaflet-map'</span></pre> in that tag refers to the <strong>div</strong> on the page where the map is going to live.</div>
+<div data-bodyclass="html1"></div>
+<div>But it's <em>empty</em>. We haven't added any <strong>tiles</strong>. Let's <em>do that</em>.</div>
+<div>There are many <strong>free tilesets</strong> on the web. Let's use some from <a href="http://stamen.com">Stamen</a>.</div>
+<div data-bodyclass="map2"><pre><span>var map = L.map('leaflet-map').<br>setView([40.435811, -79.987710], 13);<br><br>L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg').<br>addTo(map);</span></pre></div>
+<div>We added some <em>tiles</em>, centered the map on <strong>Pittsburgh</strong>, and gave it a <em>zoom level</em>.</div>
+<div data-bodyclass="html2"></div>
+<div>As <a href="http://twitter.com/mizmay">Stephanie May</a> would point out, what we have here is a <strong>reference map</strong>.</div>
+<div>A <em>very pretty</em> reference map with <strong>no labels</strong>, but a <em>reference map</em> nonetheless.</div>
+<div>What if we want to show <strong>some data</strong> on the map? Maybe <em>this hotel</em> we're sitting in.</div>
+<div><strong>We can do that!</strong></div>
+<div data-bodyclass="map3"><pre><span>L.marker([40.4399, -79.9920]).addTo(map);</span></pre></div>
+<div>We added a <em>map marker</em> at the <strong>lat/lon</strong> of the hotel to the map.</div>
+<div data-bodyclass="html3"></div>
+<div><strong>Last part.</strong> Let's add a <em>popup</em> to the marker so when we <strong>click</strong> on it it'll tell us <em>what it's identifying.</em></div>
+<div data-bodyclass="map4"><br><br><pre><span>L.marker([40.4399, -79.9920])<br>.bindPopup("NACIS 2014").addTo(map);</span></pre></div>
+<div>We <strong>binded a popup</strong> to the marker that says <em>NACIS 2014</em>.</div>
+<div data-bodyclass="html4"></div>
+<div><strong>That's it!</strong> We made a <em>web map</em>!</div>
+<div>You can find this example at <a href="http://lyzidiamond.com/nacis-talk/map.html">lyzidiamond.com /nacis-talk/map.html</a>.</div>
+<div>Wasn't that <strong>so fun?</strong>!</div>
+<div><em>You can do this on your own!</em> Go forth and make <strong>web maps</strong>!</div>
+<div>If you want <em>work with others</em> who are also learning, you should join your local <a href="http://maptime.io">Maptime</a> chapter. (Or <strong>start your own</strong>!)</div>
+<div>Remember: <em>You're a</em> <strong>champion!</strong> Keep going! <em>You can do it!</em></div>
+<div>Thanks!</div>
+<div>My name is <em>Lyzi</em>! I am on Twitter at <a href="http://twitter.com/lyzidiamond">@lyzidiamond</a>! Please come talk to me! <strong>I like talking to people!</strong></div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47757349-1', 'lyzidiamond.com');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
